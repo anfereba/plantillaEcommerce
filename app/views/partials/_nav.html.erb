@@ -21,6 +21,18 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact<i class="fas fa-id-card ml-2"></i></a>
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Iniciar Sesion", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Registro", new_user_registration_path, class: "nav-link" %>
+          </li>
+        <%end %>
       </ul>
     </div>
   </div>
