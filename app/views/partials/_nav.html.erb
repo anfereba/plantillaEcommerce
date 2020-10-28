@@ -12,16 +12,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="#">Home
             <span class="sr-only">(current)</span> <i class="fas fa-home ml-2"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About<i class="fas fa-address-card ml-2"></i></a>
+          <a class="nav-link" href="#">Acerca de<i class="fas fa-address-card ml-2"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services<i class="fab fa-xbox ml-2"></i></a>
+          <a class="nav-link" href="#">Servicios<i class="fab fa-xbox ml-2"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact<i class="fas fa-id-card ml-2"></i></a>
@@ -31,7 +31,7 @@
             <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Ver productos", :productos, class: 'nav-link'  %>
+            <%= link_to "Ver productos", :productos, class: 'nav-link'%>
           </li>
           <li class="nav-item">
             <%= link_to "Editar Perfil", :edit_user_registration, class: 'nav-link'  %>

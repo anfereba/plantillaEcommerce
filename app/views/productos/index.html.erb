@@ -2,14 +2,14 @@
 <hr>
 <div class="container">
   <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-11 col-md-6">
       <div class="row">
         <%= render @productos %>
       </div>
       <div class="text-center">
         <%= link_to "Insertar un producto", new_productos_path, class: "btn btn-success"%>
+        <%= link_to "Ver categorias", categories_path, class: 'btn btn-warning' %>
       </div>
-
     </div>
   </div>
 </div>
