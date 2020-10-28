@@ -11,6 +11,7 @@ import 'bootstrap'
 import 'css/styles'
 import 'css/shop-homepage'
 import 'css/footer'
+import 'css/login'
 import "@fortawesome/fontawesome-free/js/all";
 global.toastr = require("toastr")
 
