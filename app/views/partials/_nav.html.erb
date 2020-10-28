@@ -25,6 +25,12 @@
           <li class="nav-item">
             <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "Ver productos", :productos, class: 'nav-link'  %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Editar Perfil", :edit_user_registration, class: 'nav-link'  %>
+          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Iniciar Sesion", new_user_session_path, class: "nav-link" %>
