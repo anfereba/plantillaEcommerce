@@ -1,0 +1,16 @@
+<h1 class="text-center">Productos</h1>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="row">
+        <%= render @productos %>
+      </div>
+      <div class="text-center">
+        <%= link_to "Insertar un producto", new_productos_path, class: "btn btn-success"%>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>

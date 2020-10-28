@@ -1,0 +1,48 @@
+<section class="text-center">
+  <div class="container">
+    <h1 class=""><%= @producto.nombre %></h1>
+  </div>
+</section>
+
+<hr>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4 mr-2">
+        <a href="#"><%= image_tag @producto.image, style: "display:block" , class: "card-img-top" if @producto.image.attached?%></a>
+      </div>
+
+      <div class="col-md-5" align="left">
+
+
+        <br><br>
+
+        <strong>Precio:</strong>
+        <%= @producto.precio %>
+
+        <br><br>
+
+        <strong>Descripcion:</strong>
+        <%= @producto.descripcion %>
+
+        <br><br>
+
+        <strong>Categoria:</strong>
+        <%= @producto.category_id %>
+        <br><br>
+
+        <strong>Creado:</strong>
+        <%= @producto.created_at.strftime("%d/%m/%Y") %>
+
+        <div class="mt-5">
+          <%= link_to "Eliminar el articulo", @producto, method: :delete ,data: { confirm: 'Estas Seguro?' }, class: "btn btn-danger"%>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

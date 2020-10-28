@@ -1,0 +1,16 @@
+<div class="col-lg-4 col-md-6 mb-4">
+  <div class="card h-100">
+    <a href="#"><%= image_tag producto.image, style: "display:block" , class: "card-img-top" if producto.image.attached?%></a>
+    <div class="card-body">
+      <h4 class="card-title">
+        <a href="#"><%= producto.nombre %></a>
+      </h4>
+      <h5><%= producto.precio %></h5>
+      <p class="card-text"><%= producto.descripcion %></p>
+      <p class="card-text"><%= link_to "Ver mas", producto, class: "btn btn-primary" %></p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    </div>
+  </div>
+</div>

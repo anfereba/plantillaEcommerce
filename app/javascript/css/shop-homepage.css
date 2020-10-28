@@ -1,0 +1,35 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/templates/shop-homepage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.jumbotron {
+  background-color: #2C494E;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.card-hotel {
+  flex: 1 200px;
+  padding: 2px 0px 2px 0px;
+  margin-top: 10px;
+  margin-bottom: 0px; }
+
+.btn-reserva {
+  width: 100%;
+  border-radius: 0px; }
+
+.footer-address-icon {
+  padding-right: 10px; }
+
+.tab-content {
+  padding-top: 10px; }
+
+address {
+  color: white; }
+
