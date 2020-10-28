@@ -1,7 +1,12 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Tienda ABC</a>
+    <% if user_signed_in? %>
+      <a class="navbar-brand text-uppercase"><%= current_user.nombre + ' ' +current_user.apellidos %></a>
+    <% else %>
+      <a class="navbar-brand" href="#">Tienda ABC</a>
+    <%end %>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
