@@ -23,9 +23,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Servicios<i class="fab fa-xbox ml-2"></i></a>
         </li>
+        <% if user_signed_in? && current_user.admin? %>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact<i class="fas fa-id-card ml-2"></i></a>
+          <a class="nav-link" href="#">Admin<i class="fas fa-id-card ml-2"></i></a>
         </li>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Usuario<i class="fas fa-id-card ml-2"></i></a>
+          </li>
+
+        <%end %>
+
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>

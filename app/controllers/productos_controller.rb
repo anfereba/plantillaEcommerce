@@ -1,4 +1,6 @@
 class ProductosController < ApplicationController
+  before_action :is_admin?, except: [:index,:show]
+
   def new
     @producto = Producto.new
   end
@@ -34,6 +36,10 @@ class ProductosController < ApplicationController
     @producto = Producto.find(params[:id])
     @producto.destroy
     redirect_to :action => :index
+  end
+
+  def is_admin?
+    redirect_to root_path unless current_user.admin?
   end
 
   private

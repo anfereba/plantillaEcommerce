@@ -15,8 +15,10 @@
       <tr>
         <td><%= category.nombre %></td>
         <td><%= link_to 'Mostrar', category, class: 'btn btn-primary' %></td>
+        <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Editar', edit_category_path(category), class: 'btn btn-warning' %></td>
         <td><%= link_to 'Eliminar', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        <%end %>
       </tr>
     <% end %>
   </tbody>
@@ -24,7 +26,9 @@
 
 <br>
 <div class="text-center">
+  <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'Nueva Categoria', new_category_path, class: 'btn btn-success' %>
+  <%end %>
   <%= link_to 'Regresar', productos_path, class: 'btn btn-warning' %>
 </div>
 

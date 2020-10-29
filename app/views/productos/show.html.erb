@@ -37,7 +37,9 @@
         <%= @producto.created_at.strftime("%d/%m/%Y") %>
 
         <div class="mt-5">
+          <% if user_signed_in? && current_user.admin? %>
           <%= link_to "Eliminar el articulo", @producto, method: :delete ,data: { confirm: 'Estas Seguro?' }, class: "btn btn-danger"%>
+            <% end %>
           <%= link_to 'Regresar', productos_path, class: 'btn btn-success'  %>
         </div>
 

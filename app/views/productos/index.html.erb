@@ -7,8 +7,10 @@
         <%= render @productos %>
       </div>
       <div class="text-center">
-        <%= link_to "Insertar un producto", new_productos_path, class: "btn btn-success"%>
-        <%= link_to "Ver categoria", categories_path, class: 'btn btn-warning' %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= link_to "Insertar un producto", new_productos_path, class: "btn btn-success"%>
+          <%= link_to "Ver categoria", categories_path, class: 'btn btn-warning' %>
+        <%end %>
       </div>
     </div>
   </div>
