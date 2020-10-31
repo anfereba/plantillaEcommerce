@@ -6,6 +6,7 @@ class ProductosController < ApplicationController
   end
   def index
     @productos = Producto.all
+    @order_item = current_order.order_items.new
   end
   def create
     @producto = Producto.new(parametros)

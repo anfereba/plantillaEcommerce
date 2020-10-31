@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'cards/show'
   devise_for :users
   resources :categories
+  resources :order_items
+  resource :cards, only:[:show]
   get '/bienvenida', to: 'home#index'
 
   root to: "home#index"

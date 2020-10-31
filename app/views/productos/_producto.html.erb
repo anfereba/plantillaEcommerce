@@ -7,10 +7,18 @@
       </h4>
       <h5><%= producto.precio %></h5>
 
-      <p class="card-text"><%= link_to "Ver mas", producto, class: "btn btn-primary" %></p>
+      <%= form_for @order_item, remote: true  do |f|%>
+        <%= f.hidden_field :producto_id, :value => producto.id %>
+        <%= f.number_field :quantity, :value => 1, :min =>  1%>
+        <%= f.submit "Add to Card "%>
+
+
+      <% end %>
     </div>
+
     <div class="card-footer">
       <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
     </div>
+
   </div>
 </div>
