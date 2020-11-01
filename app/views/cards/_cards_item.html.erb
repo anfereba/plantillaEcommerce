@@ -3,7 +3,7 @@
 
 <div class="container login-container">
   <div class="row">
-    <div class="col-md-6 login-form-1">
+    <div class="col-md-12 login-form-1">
       <% @order_items.each do |item| %>
         <div class="card mb-4 shadow ">
           <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
@@ -12,7 +12,7 @@
           <div class="collapse show" id="collapseCardExample" style="">
             <div class=" card-body">
               <div class="row no-gutters align-items-center">
-
+                <a href="#"><%= image_tag item.producto.image, style: "width:224px;height:128px;margin-left:30px;" , class: "card-img-top border border-dark" if item.producto.image.attached?%></a>
                 <div class="col col-lg-8 col-md-3">
                   <%= form_for(item, remote: true) do |f| %>
                     <%= f.hidden_field :producto_id, :value => item.producto.id %>
@@ -26,8 +26,10 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;$<%= item.total %>
                     <hr>
                     <div class="btn-group form-group">
-                      <%= f.submit "Update Card ", class: 'btn btn-primary text-xs' %>
-                      <%= link_to "Remove Items", order_item_path(item), method: :delete, remote: true, class: 'btn btn-danger text-xs'%>
+                      <%= f.submit "Actualizar ", class: 'btn btn-primary text-xs' %>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <%= link_to '<i class="fas fa-minus-circle" aria-hidden="true"></i> Remover'.html_safe, order_item_path(item), method: :delete, remote: true, class: 'btn btn-danger text-xs'%>
+
                     </div>
                     <br>
                   <% end %>
@@ -37,26 +39,24 @@
           </div>
         </div>
       <% end %>
-
-    </div>
-    <div class="col md-6 login-form-1">
-
-        <div class="card shadow mb-4">
-          <a href="#collapseCardExample23" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-            <h6 class="m-0 font-weight-bold text-info">Total de la compra</h6>
-          </a>
-          <div class="collapse show" id="collapseCardExample23" style="">
-            <div class="card-body">
-              <label>Subtotal</label>
-              <br><label>Envio</label>
-              <br><label>Impuesto</label>
-              <hr>
-              <button type="button" class="btn btn-success">Pagar</button>
-            </div>
+      <div class="card shadow mb-4">
+        <a href="#collapseCardExample23" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+          <h6 class="m-0 font-weight-bold text-info">Total de la compra</h6>
+        </a>
+        <div class="collapse show" id="collapseCardExample23" style="">
+          <div class="card-body">
+            <label>Subtotal</label>
+            <br><label>Envio</label>
+            <br><label>Impuesto</label>
+            <hr>
+            <button type="button" class="btn btn-success">Pagar</button>
           </div>
         </div>
-
+      </div>
     </div>
+
+
+
 
     </div>
   </div>

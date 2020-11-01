@@ -5,17 +5,21 @@
       <h4 class="card-title">
         <a href="#"><%= producto.nombre %></a>
       </h4>
-      <h5><%= producto.precio %></h5>
+      <h5>$ <%= producto.precio %></h5>
       <p class="card-text"><%= link_to "Ver mas", producto, class: "btn btn-primary" %></p>
 
       <%= form_for @order_item, remote: true  do |f|%>
         <%= f.hidden_field :producto_id, :value => producto.id %>
         <%= f.number_field :quantity, :value => 1, :min =>  1, class: 'form-control'%>
 
-        <%= f.submit "Añadir al carrito", class: 'btn btn-success mt-3'%>
+          <%= button_tag type:'submit', class: 'btn btn-success mt-3' do %>
+          <p><i class="fas fa-cart-plus"></i> Añadir al carrito</p>
+        <% end %>
 
 
-      <% end %>
+
+
+    <% end %>
     </div>
 
     <div class="card-footer">
