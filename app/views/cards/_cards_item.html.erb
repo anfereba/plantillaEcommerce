@@ -26,9 +26,11 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;$<%= item.total %>
                     <hr>
                     <div class="btn-group form-group">
-                      <%= f.submit "Actualizar ", class: 'btn btn-primary text-xs' %>
+                      <%= button_tag type:'submit', class: 'btn btn-primary' do %>
+                        <p><i class="fas fa-check-circle"></i> Actualizar</p>
+                      <% end %>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <%= link_to '<i class="fas fa-minus-circle" aria-hidden="true"></i> Remover'.html_safe, order_item_path(item), method: :delete, remote: true, class: 'btn btn-danger text-xs'%>
+                      <%= link_to '<i class="fas fa-minus-circle" aria-hidden="true"></i> Remover'.html_safe, order_item_path(item), method: :delete, remote: true, class: 'btn btn-danger'%>
 
                     </div>
                     <br>
