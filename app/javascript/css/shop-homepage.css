@@ -54,3 +54,7 @@ address {
   margin-left: -10px;
 }
 
+.fondo{
+  background-image: url("~fondo.jpg");
+}
+
