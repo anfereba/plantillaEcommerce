@@ -25,3 +25,18 @@ global.toastr = require("toastr")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "positionClass": "toast-top-right",
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "1000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}

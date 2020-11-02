@@ -1,4 +1,4 @@
+<script>
+    toastr.success('<%= link_to "Carrito con #{current_order.order_items.size} productos con un total de $#{current_order.subtotal }",cards_path %>')
+</script>
 
-
-
-<%= link_to "#{current_order.order_items.size} items with a value of #{current_order.subtotal }$",cards_path %>
