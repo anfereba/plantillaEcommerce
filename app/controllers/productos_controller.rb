@@ -4,10 +4,17 @@ class ProductosController < ApplicationController
   def new
     @producto = Producto.new
   end
+
   def index
-    @productos = Producto.all
+    if params[:search]
+      @productos = Producto.where("nombre like ?", "%#{params[:search]}%")
+    else
+      @productos = Producto.all
+    end
     @order_item = current_order.order_items.new
   end
+
+
   def create
     @producto = Producto.new(parametros)
     if @producto.save

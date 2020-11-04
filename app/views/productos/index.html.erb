@@ -1,4 +1,17 @@
 <h1 class="text-center">Productos</h1>
+
+<%= form_tag(productos_path, :method => "get",
+             class: 'container h-100') do %>
+  <div class="d-flex justify-content-center h-100">
+    <div class="searchbar">
+      <%= search_field_tag :search, params[:search], placeholder: "Buscar", class: "search_input" %>
+      <%= button_tag "", :class => 'search_icon',:name => nil do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
 <hr>
 <div class="container">
   <div class="row">
