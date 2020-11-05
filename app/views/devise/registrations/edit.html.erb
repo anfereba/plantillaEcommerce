@@ -1,8 +1,8 @@
 <div class="container login-container">
   <div class="row">
-    <div class="col-md-6 login-form-1">
+    <div class="col-md-12 login-form-1">
 <h3>Editar <%= resource_name.to_s.humanize %></h3>
-
+      <%= image_tag "user.png", class: 'mx-auto d-block pt-5', style: 'width: 300px;'%>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 

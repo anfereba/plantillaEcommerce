@@ -22,7 +22,7 @@
         <li class="nav-item dropdown">
           <% if user_signed_in? && current_user.admin? %>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Admin
+              Admin<i class="fas fa-user-tie ml-2"></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to "Ver productos", :productos, class: 'dropdown-item' %>
@@ -45,6 +45,7 @@
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>
+
           </li>
           <li class="nav-item">
             <%= link_to "Mi Perfil", :edit_user_registration, class: 'nav-link'  %>
