@@ -1,6 +1,21 @@
-<h1>Editing Category</h1>
-
-<%= render 'form', category: @category %>
-
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<div class="container table-container text-center pb-3 ">
+  <h1 style="color:deepskyblue" class="pb-3 pt-2">Nueva categoria</h1>
+  <div class="row">
+    <div class="col-md-11 col-md-offset-2">
+      <table id="static-table " class="display table table-striped table-bordered">
+        <thead>
+        <tr>
+        <thead class="thead-dark">
+        <th>Editing Category</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= render 'form', category: @category %></td>
+          <td><%= link_to 'Regresar', categories_path, class:'btn btn-warning' %></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
