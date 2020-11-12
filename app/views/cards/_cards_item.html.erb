@@ -47,9 +47,9 @@
         </a>
         <div class="collapse show" id="collapseCardExample23" style="">
           <div class="card-body">
-            <label>Subtotal</label>
-            <br><label>Envio</label>
-            <br><label>Impuesto</label>
+            <label>Subtotal: $<%= current_order.subtotal %></label>
+            <br><label>Envio: $0.0</label>
+            <br><label>Impuesto: $0.0</label>
             <hr>
             <button type="button" class="btn btn-success">Pagar</button>
           </div>
@@ -62,11 +62,6 @@
 
     </div>
   </div>
-
-  <h3 class="text-center" >El valor actual de su carrito es de:  $<%= current_order.subtotal %></h3>
-
-
-
 
 
 </div>

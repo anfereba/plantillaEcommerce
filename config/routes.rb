@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'productos', to: "productos#index"
   get 'productos/new', to: "productos#new", as: :new_productos
-  get 'productos/:id/edit', to: "productos#edit"
+  get 'productos/:id/edit', to: "productos#edit", as: :edit_producto
   get 'productos/:id', to: "productos#show"
 
   patch "/productos/:id", to: "productos#update", as: :producto
