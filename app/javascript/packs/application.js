@@ -8,12 +8,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 import 'bootstrap'
-import 'aos'
 require("jquery")
 require('popper.js')
 require("bootstrap/dist/js/bootstrap.bundle")
 require("jquery.easing/jquery.easing")
-require("pesky_scrolly_stuff")
 import 'css/styles'
 import 'css/shop-homepage'
 import 'css/footer'
