@@ -14,7 +14,7 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-            <%= link_to "Inicio", bienvenida_path, class: 'nav-link' %>
+            <%= link_to "<i class='fas fa-home'></i> Inicio".html_safe, bienvenida_path, class: 'nav-link' %>
         </li>
 
         <li class="nav-item dropdown">
@@ -41,15 +41,16 @@
         </li>
 
         <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>
 
+          <li class="nav-item">
+            <%= link_to "<i class='fas fa-address-card'></i> Sobre nosotros".html_safe, nosotros_path, class: 'nav-link'  %>
           </li>
           <li class="nav-item">
-            <%= link_to "Mi Perfil", :edit_user_registration, class: 'nav-link'  %>
+            <%= link_to "<i class='fas fa-user'></i> Mi Perfil".html_safe, :edit_user_registration, class: 'nav-link'  %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sobre nosotros", nosotros_path, class: 'nav-link'  %>
+            <%= link_to "<i class='fas fa-sign-out-alt'></i> Cerrar Sesion".html_safe, destroy_user_session_path, method: :delete, class: "nav-link" %>
+
           </li>
         <% else %>
           <li class="nav-item">
