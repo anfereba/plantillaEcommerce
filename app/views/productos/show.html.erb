@@ -3,53 +3,24 @@
     <h1 class=""><%= @producto.nombre %></h1>
   </div>
 </section>
-
 <hr>
-
-<div class="py-5 ">
-  <div class="container login-form-1">
-
-    <div class="row justify-content-center">
-      <div class="col-md-4 mr-2">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="marco">
+      <div class="fotoproducto">
         <a href="#"><%= image_tag @producto.image, style: "display:block" , class: "card-img-top" if @producto.image.attached?%></a>
       </div>
-
-      <div class="col-md-5" align="left">
-
-
-        <br><br>
-
-        <strong>Precio:</strong>
-        <%= @producto.precio %>
-
-        <br><br>
-
-        <strong>Descripcion:</strong>
-        <%= @producto.descripcion %>
-
-        <br><br>
-
-        <strong>Categoria:</strong>
-        <%= @producto.category_id %>
-        <br><br>
-
-        <strong>Creado:</strong>
-        <%= @producto.created_at.strftime("%d/%m/%Y") %>
-
-
-
-        <div class="mt-5">
+      <div class="descripcionProducto">
+        <h2><%= @producto.nombre %></h2>
+        <h4>Producto Tecnologico</h4>
+        <h1>$<%= @producto.precio %></h1>
+        <p><%= @producto.descripcion %></p>
           <% if user_signed_in? && current_user.admin? %>
-          <%= link_to "Eliminar el articulo", @producto, method: :delete ,data: { confirm: 'Estas Seguro?' }, class: "btn btn-danger"%>
-            <%= link_to "Editar el articulo", edit_producto_path, class: "btn btn-warning" %>
+            <%= link_to "Eliminar", @producto, method: :delete ,data: { confirm: 'Estas Seguro?' }, class: "botonProducto"%>
+            <%= link_to "Editar", edit_producto_path, class: "botonProducto" %>
 
-            <% end %>
-          <%= link_to 'Regresar', productos_path, class: 'btn btn-success'  %>
-        </div>
-
-
+          <% end %>
+          <%= link_to 'Regresar', productos_path, class: 'botonProducto'  %>
       </div>
-
     </div>
-  </div>
-</div>
+
+
