@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :order_items
   resource :cards, only:[:show]
   get '/bienvenida', to: 'home#index'
-
+  get '/nosotros', to: 'home#about_us'
   root to: "home#index"
 
   get 'productos', to: "productos#index"
